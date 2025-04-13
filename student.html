@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Attendance Summary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="studentPage" class="page">
+    <div class="container">
+      <h1>Student Attendance Summary</h1>
+      <div id="studentName"></div>
+
+      <label for="subjectSelectStudent">Select Subject:</label>
+      <select id="subjectSelectStudent">
+        <option value="">Select Subject</option>
+        <option value="COMMON">COMMON</option>
+        <option value="DCN">DCN</option>
+        <option value="JAVA">JAVA</option>
+        <option value="MIC">MIC</option>
+        <option value="EES">EES</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="PWP">PWP</option>
+      </select>
+
+      <button type="button" class="submit-btn" onclick="displayAttendance()">Submit</button>
+
+      <table id="attendanceTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody id="attendanceBody"></tbody>
+      </table>
+
+      <button id="studentLogout" class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

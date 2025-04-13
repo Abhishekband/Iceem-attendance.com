@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Mark Attendance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="adminPage" class="page">
+    <div class="container">
+      <h1>Admin - Mark Attendance</h1>
+      <div class="controls">
+        <input type="date" id="attendanceDate">
+        <select id="subjectSelectAdmin">
+          <option value="">Select Subject</option>
+          <option value="COMMON">COMMON</option>
+          <option value="DCN">DCN</option>
+          <option value="JAVA">JAVA</option>
+          <option value="MIC">MIC</option>
+          <option value="EES">EES</option>
+          <option value="UI/UX">UI/UX</option>
+          <option value="PWP">PWP</option>
+        </select>
+      </div>
+
+      <form id="attendanceForm">
+        <div class="student" data-roll="1201" data-name="Abhishek Band">
+          <span>Abhishek Band</span>
+          <div class="btn-group">
+            <button type="button" class="present-btn" onclick="markAttendance(this, 'Present')">Present</button>
+            <button type="button" class="absent-btn" onclick="markAttendance(this, 'Absent')">Absent</button>
+          </div>
+        </div>
+        <div class="student" data-roll="1202" data-name="Yash Barbaile">
+          <span>Yash Barbaile</span>
+          <div class="btn-group">
+            <button type="button" class="present-btn" onclick="markAttendance(this, 'Present')">Present</button>
+            <button type="button" class="absent-btn" onclick="markAttendance(this, 'Absent')">Absent</button>
+          </div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="submitAttendance()">Submit</button>
+      </form>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
